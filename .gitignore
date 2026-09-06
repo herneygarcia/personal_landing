@@ -1,0 +1,14 @@
+# Material de origen y de trabajo: se conserva en local, no se publica
+*.docx
+*.rtf
+make_*.py
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Configuración local de herramientas
+.claude/
