@@ -369,7 +369,7 @@ html, body {
 @media (max-width: 768px) {
   .hero {
     padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-2xl);
-    margin-top: 80px;
+    margin-top: 140px;
   }
 
   .hero-container {
@@ -1000,6 +1000,40 @@ html, body {
   font-style: italic;
 }
 
+/* En movil la rejilla auto-fit caia a 1 columna: la portada ocupaba todo el
+   ancho (~500px de alto) y aplastaba titulo y autor entre portada y portada. */
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+  }
+
+  /* initScrollReveal() deja un transform inline (scale(1.05)) al revelar la
+     tarjeta; en 2 columnas estrechas ese scale invade el gap. Solo !important
+     lo gana a un estilo inline. */
+  .book-card,
+  .book-1, .book-2, .book-3, .book-4, .book-5 {
+    transform: none !important;
+  }
+
+  .book-info h4 {
+    font-size: 0.95rem;
+    line-height: 1.25;
+  }
+
+  .book-author {
+    font-size: 0.75rem;
+  }
+
+  /* La etiqueta de color es desproporcionada en tarjetas de ~165px */
+  .book-tag {
+    width: 34px;
+    height: 34px;
+    top: 10px;
+    right: -6px;
+  }
+}
+
 /* ========================================
    PUBLICATIONS - NUMBERED STYLE
    ======================================== */
@@ -1441,7 +1475,7 @@ html, body {
   }
 
   .hero {
-    margin-top: 60px;
+    margin-top: 140px;
   }
 
   .hero-container {
