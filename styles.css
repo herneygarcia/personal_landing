@@ -1035,6 +1035,42 @@ html, body {
 }
 
 /* ========================================
+   APPS SECTION - mismas tarjetas que los libros
+   ======================================== */
+
+/* auto-fill (no auto-fit): con una sola tarjeta, auto-fit la estiraria a todo el ancho */
+.apps-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+/* El logo es apaisado: se centra en un marco con proporcion de portada
+   para que la tarjeta mida igual que las de los libros. El fondo iguala el
+   gris del propio logo (stoa.png) para que no se vea su recuadro. */
+.app-cover {
+  aspect-ratio: 3 / 4;
+  background: #e1e3dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+}
+
+.app-cover img {
+  width: 85%;
+}
+
+@media (max-width: 768px) {
+  /* Misma rejilla de 2 columnas que los libros en movil */
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .app-cover {
+    padding: var(--spacing-md);
+  }
+}
+
+/* ========================================
    PUBLICATIONS - NUMBERED STYLE
    ======================================== */
 
