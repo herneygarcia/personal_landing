@@ -103,4 +103,3 @@ GitHub Pages: Settings → Pages → rama `main`, carpeta `/ (root)`. Queda en `
 
 - Las imágenes `assets/pay_*.png` ("Pague aquí", generadas por `make_pay.py`) **no se usan** en ninguna página.
 - Está sin construir el bloque de pago con la llave Bre-B y el QR dentro de `consulta-virtual.html`; hoy el dato solo aparece en el paso 2 de "Cómo Funciona".
-- El subtítulo de `consulta-virtual.html` todavía promete "Pago seguro en línea", que no corresponde al flujo real.

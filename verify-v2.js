@@ -59,7 +59,8 @@
 
   // 6. Embed de Cal.com montado (solo donde exista el contenedor)
   const cal = document.querySelector('#cal-inline');
-  if (cal) check('Cal.com montó un iframe', !!cal.querySelector('iframe'),
+  // #cal-inline puede ser el propio <iframe> o un contenedor donde el embed lo monta
+  if (cal) check('Cal.com montó un iframe', cal.tagName === 'IFRAME' || !!cal.querySelector('iframe'),
     'si falla, el event type sigue en Draft en cal.com');
 
   // 7. Enlaces internos resuelven (async, se reporta aparte)
